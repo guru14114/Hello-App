@@ -1,23 +1,16 @@
 public class HelloApp {
     public static void main(String[] args) {
 
-        // Case when no arguments are passed
+        // If no arguments
         if (args.length == 0) {
             System.out.println("Hello, World!");
             return;
         }
 
-        String result = "Hello, ";
+        // Join all names with comma
+        String names = String.join(", ", args);
 
-        // Enhanced for loop to concatenate names
-        for (String name : args) {
-            result += name + ", ";
-        }
-
-        // Remove trailing ", " using substring
-        result = result.substring(0, result.length() - 2);
-
-        // Print final result
-        System.out.println(result + "!");
+        // Print final output
+        System.out.println("Hello, " + names + "!");
     }
 }
